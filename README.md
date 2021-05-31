@@ -45,5 +45,9 @@ This will launch the Cypress runner. All your tests will be displayed on the GUI
 ## Reporting
 - We have used moachawesome reports for reporting purpose. After the test execution is completed, an HTML report would be generated under `/cypress/reports/mochareports` folder.
 - In case of a test failures, screenshots would be generated under `/cypress/screenshots` folder.
-- Videos have been turned off. In case you want to get the videos, go to cypress.json and make ```"video" : true```
+
+
+## Configurations
+- In case of a test failure, it will be re-run for the number of retries mentioned in cypress. json. To change the number of retries, go to cypress.json and chnage the value ``"retries" : 2``
+- - Videos have been turned off. In case you want to get the videos, go to cypress.json and make ```"video" : true```
 
