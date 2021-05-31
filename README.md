@@ -1,8 +1,16 @@
 ## cypress-economist-assignment
 
+## Table of contents
+* [Introduction](#introduction)
+* [Scenarios](#scenarios)
+* [Folder Structure](#folder-structure)
+* [Running Tests](#running-tests)
+* [Reporting](#reporting)
+* [Configurations](#configurations)
+
 ## Introduction
 
-This is a framework based on Cypress to do end-to-end testing for the tasks given in the assignment by The Economist.
+This framework is based on the Page Object Model design pattern. We have used Cypress to achieve end-to-end testing for the tasks given in the assignment by The Economist. 
 
 Below test scenarios have been covered in this framework.
 
@@ -19,10 +27,10 @@ Below test scenarios have been covered in this framework.
 
 
 ## Folder structure
-- We have folowed Page Object Model design pattern to create our test scenarios.
-- All the test cases have been placed under `cypress/integration/tests` folder
-- All the page objects are under `/cypress/pages` folder. Since we are following Page Object Model design pattern, separate page class files have been created for the different types of pages in the application.
-- The test data to be used in the tests is stored under `/cypress/fixtures` folder. Page wise test data json files have been created to be used in different test cases.
+
+- ##### Tests - All the test cases have been placed under `cypress/integration/tests` folder
+- ##### Page Objects - All the page objects are under `/cypress/pages` folder. Since we are following Page Object Model design pattern, separate page class files have been created for the different types of pages in the application.
+- ##### Test Data - The test data to be used in the tests is stored under `/cypress/fixtures` folder. Page wise test data json files have been created to be used in different test cases.
 
 
 
@@ -49,5 +57,5 @@ This will launch the Cypress runner. All your tests will be displayed on the GUI
 
 ## Configurations
 - In case of a test failure, it will be re-run for the number of retries mentioned in cypress. json. To change the number of retries, go to cypress.json and chnage the value ``"retries" : 2``
-- - Videos have been turned off. In case you want to get the videos, go to cypress.json and make ```"video" : true```
+- Videos have been turned off. In case you want to get the videos, go to cypress.json and make ```"video" : true```
 
