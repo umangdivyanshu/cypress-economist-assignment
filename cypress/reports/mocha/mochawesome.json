@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-31T14:52:59.890Z",
+    "end": "2021-05-31T14:53:30.963Z",
+    "duration": 31073,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e8f8978a-8ffe-4c07-894c-7e8950560f67",
+      "title": "",
+      "fullFile": "cypress/integration/tests/HomepageTest.js",
+      "file": "cypress/integration/tests/HomepageTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3fe4e5ff-48ba-4396-b3bb-c40d7a905a11",
+          "title": "launch the app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify homepage and related components",
+              "fullTitle": "launch the app verify homepage and related components",
+              "timedOut": null,
+              "duration": 4658,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.globalNavIsVisible();\n_HomePage.default.navigationLinksAreVisible(5);\n_HomePage.default.searchSectionIsVisible();\n_HomePage.default.browseBySectorIsVisible();\n_HomePage.default.verifyBrowseBySectorLinks(data.sectorlinkscount);\n_HomePage.default.browseBySectorHeading(data.browsebysectorheading);",
+              "err": {},
+              "uuid": "a598ee0a-be08-4530-aedc-e4127a56ff75",
+              "parentUUID": "3fe4e5ff-48ba-4396-b3bb-c40d7a905a11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify sign in and create account links",
+              "fullTitle": "launch the app verify sign in and create account links",
+              "timedOut": null,
+              "duration": 7729,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.globalNavIsVisible();\n_HomePage.default.verifySignInLink('Logon | Jobs.Economist.com', 'logon');\n_HomePage.default.verifyCreateAccountLink('Register | Jobs.Economist.com', 'register');",
+              "err": {},
+              "uuid": "c452d8c2-5739-4d01-aa06-2d989c10a795",
+              "parentUUID": "3fe4e5ff-48ba-4396-b3bb-c40d7a905a11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify global navigation links",
+              "fullTitle": "launch the app verify global navigation links",
+              "timedOut": null,
+              "duration": 15741,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.verifyNavigationLinksAreWorking();",
+              "err": {},
+              "uuid": "72900c90-bb3a-4a43-ba9d-b9af75e5b39c",
+              "parentUUID": "3fe4e5ff-48ba-4396-b3bb-c40d7a905a11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a598ee0a-be08-4530-aedc-e4127a56ff75",
+            "c452d8c2-5739-4d01-aa06-2d989c10a795",
+            "72900c90-bb3a-4a43-ba9d-b9af75e5b39c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28128,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-31T14:53:36.071Z",
+    "end": "2021-05-31T14:54:47.825Z",
+    "duration": 71754,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e0199a2-ef8d-4c2a-8e28-4a2a4e125841",
+      "title": "",
+      "fullFile": "cypress/integration/tests/JobsTest.js",
+      "file": "cypress/integration/tests/JobsTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2844dc2f-9f06-41d2-9d36-91db683fba9b",
+          "title": "Validate job listing and detail pages",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "browse jobs by sector",
+              "fullTitle": "Validate job listing and detail pages browse jobs by sector",
+              "timedOut": null,
+              "duration": 9215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"assets/JobsTest.js/Validate job listing and detail pages -- browse jobs by sector (failed).png\"",
+              "code": "_HomePage.default.browseBySectorLinks.each(($el, index, $list) => {\n  const link = $el.find('a').first();\n  if (link.text().includes(data.browsesector)) {\n    const numberOfJobs = $el.find('small').first().text();\n    cy.wrap(link).click();\n    _JobListingPage.default.verifyJobCategory(data.browsesector);\n    _JobListingPage.default.verifyJobCount(numberOfJobs);\n    _JobListingPage.default.verifyJobListings(numberOfJobs);\n    _JobListingPage.default.verifyCurrentlySelectedCategory(data.browsesector);\n    _JobListingPage.default.clickJobListing();\n    _JobDetailPage.default.verifyApplyButtonIsVisible();\n  }\n});",
+              "err": {},
+              "uuid": "10db1dea-9b62-425e-9e7a-9b520cc04bd6",
+              "parentUUID": "2844dc2f-9f06-41d2-9d36-91db683fba9b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "10db1dea-9b62-425e-9e7a-9b520cc04bd6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9215,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

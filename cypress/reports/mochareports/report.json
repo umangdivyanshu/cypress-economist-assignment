@@ -1,0 +1,261 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-31T14:52:59.890Z",
+    "end": "2021-05-31T14:55:03.542Z",
+    "duration": 46017,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e8f8978a-8ffe-4c07-894c-7e8950560f67",
+      "title": "",
+      "fullFile": "cypress/integration/tests/HomepageTest.js",
+      "file": "cypress/integration/tests/HomepageTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3fe4e5ff-48ba-4396-b3bb-c40d7a905a11",
+          "title": "launch the app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify homepage and related components",
+              "fullTitle": "launch the app verify homepage and related components",
+              "timedOut": null,
+              "duration": 4658,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.globalNavIsVisible();\n_HomePage.default.navigationLinksAreVisible(5);\n_HomePage.default.searchSectionIsVisible();\n_HomePage.default.browseBySectorIsVisible();\n_HomePage.default.verifyBrowseBySectorLinks(data.sectorlinkscount);\n_HomePage.default.browseBySectorHeading(data.browsebysectorheading);",
+              "err": {},
+              "uuid": "a598ee0a-be08-4530-aedc-e4127a56ff75",
+              "parentUUID": "3fe4e5ff-48ba-4396-b3bb-c40d7a905a11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify sign in and create account links",
+              "fullTitle": "launch the app verify sign in and create account links",
+              "timedOut": null,
+              "duration": 7729,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.globalNavIsVisible();\n_HomePage.default.verifySignInLink('Logon | Jobs.Economist.com', 'logon');\n_HomePage.default.verifyCreateAccountLink('Register | Jobs.Economist.com', 'register');",
+              "err": {},
+              "uuid": "c452d8c2-5739-4d01-aa06-2d989c10a795",
+              "parentUUID": "3fe4e5ff-48ba-4396-b3bb-c40d7a905a11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify global navigation links",
+              "fullTitle": "launch the app verify global navigation links",
+              "timedOut": null,
+              "duration": 15741,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.verifyNavigationLinksAreWorking();",
+              "err": {},
+              "uuid": "72900c90-bb3a-4a43-ba9d-b9af75e5b39c",
+              "parentUUID": "3fe4e5ff-48ba-4396-b3bb-c40d7a905a11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a598ee0a-be08-4530-aedc-e4127a56ff75",
+            "c452d8c2-5739-4d01-aa06-2d989c10a795",
+            "72900c90-bb3a-4a43-ba9d-b9af75e5b39c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28128,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8e0199a2-ef8d-4c2a-8e28-4a2a4e125841",
+      "title": "",
+      "fullFile": "cypress/integration/tests/JobsTest.js",
+      "file": "cypress/integration/tests/JobsTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2844dc2f-9f06-41d2-9d36-91db683fba9b",
+          "title": "Validate job listing and detail pages",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "browse jobs by sector",
+              "fullTitle": "Validate job listing and detail pages browse jobs by sector",
+              "timedOut": null,
+              "duration": 9215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"assets/JobsTest.js/Validate job listing and detail pages -- browse jobs by sector (failed).png\"",
+              "code": "_HomePage.default.browseBySectorLinks.each(($el, index, $list) => {\n  const link = $el.find('a').first();\n  if (link.text().includes(data.browsesector)) {\n    const numberOfJobs = $el.find('small').first().text();\n    cy.wrap(link).click();\n    _JobListingPage.default.verifyJobCategory(data.browsesector);\n    _JobListingPage.default.verifyJobCount(numberOfJobs);\n    _JobListingPage.default.verifyJobListings(numberOfJobs);\n    _JobListingPage.default.verifyCurrentlySelectedCategory(data.browsesector);\n    _JobListingPage.default.clickJobListing();\n    _JobDetailPage.default.verifyApplyButtonIsVisible();\n  }\n});",
+              "err": {},
+              "uuid": "10db1dea-9b62-425e-9e7a-9b520cc04bd6",
+              "parentUUID": "2844dc2f-9f06-41d2-9d36-91db683fba9b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "10db1dea-9b62-425e-9e7a-9b520cc04bd6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9215,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "feac6e9b-506c-452a-93ca-2ff8b95d552b",
+      "title": "",
+      "fullFile": "cypress/integration/tests/SearchTest.js",
+      "file": "cypress/integration/tests/SearchTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b5f13fa-f488-49ea-8098-4b5aac02ed4b",
+          "title": "validate search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "searching a job",
+              "fullTitle": "validate search searching a job",
+              "timedOut": null,
+              "duration": 8674,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.searchSectionIsVisible();\n_HomePage.default.enterSearchInputKeyword(data.keyword);\n_HomePage.default.enterSearchInputLocation(data.location);\n_HomePage.default.selectSearchRadius(data.radius);\n_HomePage.default.clickSearchButton();\n_SearchResultPage.default.verifySearchedKeyword(data.keyword);\n_SearchResultPage.default.verifySelectedRadius(data.radius);\n_SearchResultPage.default.verifySearchResultsRendering();",
+              "err": {},
+              "uuid": "70673c87-6a2e-469c-ba05-2bc290e7c9bc",
+              "parentUUID": "4b5f13fa-f488-49ea-8098-4b5aac02ed4b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "70673c87-6a2e-469c-ba05-2bc290e7c9bc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8674,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
